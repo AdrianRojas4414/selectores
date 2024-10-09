@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p::first-line{
+            color: aqua;
+        } */
+        .foo, .bar{
+            color: green;
+        }
+        .abuelo .nieto{
+            color: pink;
+        }
+        .abuelo2 div{
+            color: blue;
+        }
+        .abuelo3>div{
+            color:orange;
+        }
+        .hijo1~div{
+            color: chartreuse;
+        }
+        .foo2{
+            color: red;
+        }
+        #bar2{
+            color: green;
+        }
+        #outer #inner a{
+            color: rgb(85, 255, 0); /* es mas especifico que el de abajo*/
+        }
+        #outer a{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ab beatae consequuntur eligendi, quia, recusandae velit blanditiis ea sunt autem voluptatibus ducimus eius dolores vel quo tempora est quasi consectetur?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi deleniti libero, quo at numquam asperiores hic architecto fugiat nesciunt quia iste neque quibusdam magnam iure laudantium soluta officiis iusto porro.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sint nostrum odio eos quos! Corporis, saepe velit. Soluta laboriosam officiis, ullam praesentium harum voluptates quibusdam unde voluptatem molestias magni! Nemo?</p>
+    <br><br><br>
+    <div class="foo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div class="bar">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div class="baz">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+
+    <br><br><br>
+
+    <div class="abuelo">
+        <div class="hijo">
+            <div class="nieto">
+                nieto 1
+            </div>
+            <div class="nieto">
+                nieto 2
+            </div>
+            <div class="nieto">
+                nieto 3
+            </div>
+        </div>
+    </div>
+    <div class="nieto">
+        nieto adoptado
+    </div>
+
+    <br><br><br>
+    <div class="abuelo2">
+        <div class="hijo">
+            <div>soy el nieto 1</div>
+            <div>soy el nieto 2</div>
+        </div>
+        <div>Soy el hijo 2</div>
+    </div>
+    <div class="nieto">
+        nieto adoptado
+    </div>
+
+    <br><br><br>
+    <div class="abuelo3">
+        <div class="hijo">
+            <div>Soy el nieto 1</div>
+            <div>Soy el nieto 2</div>
+        </div>
+        <div class="hijo">Soy el hijo 2</div>
+    </div>
+    <div class="nieto">
+        Nieto adoptado
+    </div>
+
+    <br><br><br>
+    <div class="abuelo4">
+        <div class="hijo1">
+            soy hijo 1
+        </div>
+        <div class="hijo2">
+            soy hijo 2
+        </div>
+        <div class="hijo3">
+            soy hijo 3
+        </div>
+    </div>
+
+    <br><br><br>
+    <p class="foo2" id="bar2">HOLA</p>
+    <p>MUNDO</p>
+
+    <br><br><br>
+    <div id="outer">
+        <div id="inner">
+            <a href="">HOLA A TODOS</a>
+        </div>
+    </div>
+
+</body>
+</html>
